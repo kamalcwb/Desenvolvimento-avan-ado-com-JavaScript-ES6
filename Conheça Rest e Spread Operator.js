@@ -40,3 +40,19 @@ const obj2 = {
     teste2: 'Ola'
 }
 console.log(obj2)
+
+const objMerged = {
+    ...obj,
+    ...obj2
+}
+
+const obj3 = {
+    test: 123,
+    subObj: {
+        test: '123'
+    }
+}
+const obj4 = {
+    ...obj3, subObj: { ...obj3.subObj }
+};
+obj4.subObj.test = 456
