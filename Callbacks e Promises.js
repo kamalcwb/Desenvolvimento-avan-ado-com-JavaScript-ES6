@@ -51,6 +51,10 @@ doSomeThingPromise
     .then(data2 => console.log(data2))
     .catch(error => console.log('ops, error'))
 
-Promise.all([doOtherThingPromise(), doOtherThingPromise()]).then((data => {
+Promise.all([doOtherThingPromise(), doOtherThingPromise()]).then((data => { //resolve as 2 promisses ao mesmo tempo
     console.log(data)
 }))
+
+Promise.race([doSomeThingPromise(), doOtherThingPromise()]).then(data => { //retorn a prommise que resolver primeiro
+    console.log(data)
+})
