@@ -30,3 +30,20 @@ var obj = {
 }
 
 console.log(obj.sum(1, 5))
+//Encurtando a funçao
+var obj = {
+    sum(a, b) {
+        return a + b
+    }
+}
+//Propriedade
+var propName = 'test'
+
+var obj = {}
+obj[propName] = 'prop value'
+//
+var propName = 'teste'
+var obj = {
+    [propName + 'concat']: 'prop value'
+}
+console.log(obj)
